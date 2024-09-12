@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylecontact.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Miguel P.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="education.html">Education</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-content">
+            <h1>Get in <span>Touch</span></h1>
+            <p>Feel free to reach out if you have any questions or inquiries!</p>
+            
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                    <!-- Elemento da carta -->
+<div id="letter" class="letter">
+    <div class="letter-content">✉️</div>
+</div>
+
+<!-- Mensagem de sucesso -->
+<div id="successMessage" class="success-message" style="display: none;">Message Sent!</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+    event.preventDefault(); // Previne o envio imediato do formulário
+
+    // Simula o envio do formulário
+    const letter = document.getElementById('letter');
+    letter.classList.add('sent');
+
+    // Após a animação, mostre a mensagem de sucesso
+    setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'block';
+        // Aqui você pode realmente enviar o formulário
+        document.getElementById('contactForm').submit();
+    }, 2000); // O tempo da animação (2 segundos)
+}
+    </script>
+
+</body>
+</html>

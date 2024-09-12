@@ -1,0 +1,142 @@
+/* Estilo geral para o corpo da página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #0770AF;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #0770AF; /* Cor Java Dark Red */
+    border-bottom: 3px solid #0770AF; /* Cor Java Dark Red */
+}
+
+header nav a {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav a.active, header nav a:hover {
+    color: #0770AF;
+}
+
+
+/* Seção de Services */
+.services {
+    padding: 5rem 9%;
+    background-color: black;
+}
+
+.services-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #EACB4D;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.services-content span {
+    color: #0770AF;
+}
+
+.services-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Lista de serviços */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #161616;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #0770AF;
+}
+
+.service-item i {
+    font-size: 4rem;
+    color: #EACB4D;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 2.5rem;
+    color: #EACB4D;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    header nav a {
+        font-size: 1.4rem;
+        margin: 0 10px;
+    }
+
+    header .logo {
+        font-size: 2rem;
+    }
+
+    .services-content h1 {
+        font-size: 3rem;
+    }
+
+    .services-content p {
+        font-size: 1.6rem;
+    }
+}
